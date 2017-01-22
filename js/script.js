@@ -14,7 +14,7 @@ function mobileNavbar () {
       if($(window).scrollTop() > aboveHeight) {
         var navHeight = $('nav').outerHeight();
         $('nav').addClass('fixed');
-        $('html').css('padding-top', 0 + 'px');
+        $('html').css('padding-top', navHeight + 'px');
       }
       else {
         $('nav').removeClass('fixed');

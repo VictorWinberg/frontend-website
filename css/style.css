@@ -18,101 +18,135 @@ a {
   color: inherit;
 }
 
+.upper-container {
+  color: #eee;
+  background-color: #222;
+  float: left;
+  width: 100%;
+}
+
+header.brand {
+  float: left;
+  width: 26%;
+  padding-left: 4%;
+  line-height: 4em;
+  font-size: 2em;
+}
+
+nav {
+  float: left;
+  width: 70%;
+  padding: 50px 0;
+}
+
 nav ul {
-  color: white;
-  background-color: orange;
-  margin: 0;
-  padding: 0;
   text-align: center;
-  position: relative;
 }
 
 nav ul li {
   display: inline-block;
-  padding: 20px;
-  cursor: pointer;
+  padding: 15px;
+  /*cursor: pointer;*/
 }
 
 nav ul li:hover {
-  background-color: rgb(27, 27, 27);
+  color: #222;
+  background-color: khaki;
 }
 
 nav .handle {
   display: none;
-  width: 100%;
-  color: white;
-  background: rgb(27, 27, 27);
-  text-align: left;
-  padding: 15px 4%;
 }
 
-/* Small Devices, Tablets */
+/* Small Devices and tablets */
 @media screen and (max-width : 768px) {
+  .upper-container {
+    background: #222;
+  }
+
+  header.brand {
+    text-align: center;
+    width: 92%;
+    padding: 0 4% 0 4%;
+  }
+
+  nav {
+    padding: 0;
+    width: 100%;
+    background: white;
+  }
+
   nav.fixed {
     position: fixed;
     top: 0;
-    width: 100%;
     /*z-index: 100;*/
   }
 
+  nav .handle {
+    display: block;
+    text-align: left;
+    color: #eee;
+    background-color: #222;
+    width: 100%;
+    padding: 15px 4%;
+    border-bottom: thick solid khaki;
+  }
+
   nav ul {
-    perspective: 100px;
-    background: none;
+    perspective: 150px;
+    /*background: none;*/
+    background-color: green;
   }
 
   nav ul li {
-    display: block; /* Tar bort spacing mellan items */
-    background: orange;
-    padding: 0;
-    line-height: 58px;
+    display: block;
+    background: #222;
     overflow: hidden;
+    line-height: 58px;
     height: 0;
     width: 100%;
-    cursor: pointer;
+    padding: 0;
     transform-origin: top;
     transform: rotateX(-70deg);
-    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2), height 0s linear;
   }
 
   nav ul li:nth-child(1) {
-    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.75s, height 0s linear 0.75s;
+    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 1.0s, height 0.1s linear 1.15s;
   }
   nav ul li:nth-child(2) {
-    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.60s, height 0s linear 0.60s;
+    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.8s, height 0.1s linear 0.95s;
   }
   nav ul li:nth-child(3) {
-    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.45s, height 0s linear 0.45s;
+    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.6s, height 0.1s linear 0.75s;
   }
   nav ul li:nth-child(4) {
-    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.30s, height 0s linear 0.30s;
+    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.4s, height 0.1s linear 0.55s;
   }
   nav ul li:nth-child(5) {
-    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.15s, height 0s linear 0.15s;
+    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.2s, height 0.1s linear 0.35s;
+  }
+  nav ul li:nth-child(6) {
+    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1), height 0.1s linear 0.15s;
   }
 
   nav ul.is-visible li {
     transform: rotateX(0deg);
     height: 58px;
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5);
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2), height 0.1s linear;
   }
-
   nav ul.is-visible li:nth-child(2) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 0.3s, height 0s linear 0.3s;
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.2s, height 0.1s linear 0.2s;
   }
   nav ul.is-visible li:nth-child(3) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 0.6s, height 0s linear 0.6s;
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.4s, height 0.1s linear 0.4s;
   }
   nav ul.is-visible li:nth-child(4) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 0.9s, height 0s linear 0.9s;
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.6s, height 0.1s linear 0.6s;
   }
   nav ul.is-visible li:nth-child(5) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 1.2s, height 0s linear 1.2s;
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.8s, height 0.1s linear 0.8s;
   }
   nav ul.is-visible li:nth-child(6) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 1.5s, height 0s linear 1.5s;
-  }
-
-  nav .handle {
-    display: block;
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 1.0s, height 0.1s linear 1.0s;
   }
 }
