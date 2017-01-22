@@ -73,7 +73,7 @@ nav .handle {
   nav {
     padding: 0;
     width: 100%;
-    background: white;
+    background: none;
   }
 
   nav.fixed {
@@ -94,8 +94,7 @@ nav .handle {
 
   nav ul {
     perspective: 150px;
-    /*background: none;*/
-    background-color: green;
+    background-color: white;
   }
 
   nav ul li {
@@ -149,4 +148,5 @@ nav .handle {
   nav ul.is-visible li:nth-child(6) {
     transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 1.0s, height 0.1s linear 1.0s;
   }
+
 }
