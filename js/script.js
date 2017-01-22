@@ -1,4 +1,17 @@
 $(document).ready(function() {
+  var unit = ($(window).width() < 768) ? 'mobile' : 'browser';
+  $('section').append('<p class="screen">Your screen width is: ' + $(window).width() + 'px. I think that you are a ' + unit + '!</p>');
+  $('section').append('<p class="mouse"></p>');
+
+  $(window).resize(function() {
+    unit = ($(window).width() < 768) ? 'mobile' : 'browser';
+    $('section p.screen').text('Your screen width is: ' + $(window).width() + 'px. Now I actually think you are a ' + unit + '! Stop changing! It makes me confused!');
+  });
+
+  $(document).on('mousemove', function(event) {
+    $('section p.mouse').text("Your mouse i at x = " + event.pageX + " and y = " + event.pageY + ", isn't that just awesome!?" );
+  });
+
   mobileNavbar();
 });
 
