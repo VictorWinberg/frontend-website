@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  color: white;
+  background-color: orange;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: rgb(27, 27, 27);
+}
+
+nav .handle {
+  display: none;
+  width: 100%;
+  color: white;
+  background: rgb(27, 27, 27);
+  text-align: left;
+  padding: 15px 4%;
+}
+
+/* Small Devices, Tablets */
+@media screen and (max-width : 768px) {
+  nav.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*z-index: 100;*/
+  }
+
+  nav ul {
+    perspective: 100px;
+    background: none;
+  }
+
+  nav ul li {
+    display: block; /* Tar bort spacing mellan items */
+    background: orange;
+    padding: 0;
+    line-height: 58px;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    cursor: pointer;
+    transform-origin: top;
+    transform: rotateX(-70deg);
+    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2), height 0s linear;
+  }
+
+  nav ul li:nth-child(1) {
+    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.75s, height 0s linear 0.75s;
+  }
+  nav ul li:nth-child(2) {
+    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.60s, height 0s linear 0.60s;
+  }
+  nav ul li:nth-child(3) {
+    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.45s, height 0s linear 0.45s;
+  }
+  nav ul li:nth-child(4) {
+    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.30s, height 0s linear 0.30s;
+  }
+  nav ul li:nth-child(5) {
+    transition: transform 0.2s cubic-bezier(0.4,-0.5,0.3,2) 0.15s, height 0s linear 0.15s;
+  }
+
+  nav ul.is-visible li {
+    transform: rotateX(0deg);
+    height: 58px;
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5);
+  }
+
+  nav ul.is-visible li:nth-child(2) {
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 0.3s, height 0s linear 0.3s;
+  }
+  nav ul.is-visible li:nth-child(3) {
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 0.6s, height 0s linear 0.6s;
+  }
+  nav ul.is-visible li:nth-child(4) {
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 0.9s, height 0s linear 0.9s;
+  }
+  nav ul.is-visible li:nth-child(5) {
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 1.2s, height 0s linear 1.2s;
+  }
+  nav ul.is-visible li:nth-child(6) {
+    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2.5) 1.5s, height 0s linear 1.5s;
+  }
+
+  nav .handle {
+    display: block;
+  }
+}
