@@ -38,7 +38,7 @@ function mobileNavbar () {
       else {
         $('nav').removeClass('fixed');
         $('header').css('display', 'block');
-        $('html').css('padding-top', 0 + 'px');
+        $('html').css('padding-top', '0px');
       }
     }
   }
