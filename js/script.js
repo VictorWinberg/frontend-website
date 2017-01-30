@@ -13,6 +13,8 @@ $(document).ready(function() {
   });
 
   mobileNavbar();
+
+  footerMarginFix();
 });
 
 function mobileNavbar () {
@@ -42,4 +44,14 @@ function mobileNavbar () {
       }
     }
   }
+}
+
+function footerMarginFix() {
+  var windowHeight = $(window).height();
+  var newHeight = $('body').height() + $('footer').height();
+  if(newHeight < windowHeight) {
+    var margin = windowHeight - newHeight;
+    $('footer').css('margin-top', margin + 'px');
+  }
+  $('footer').css('display', 'block').hide().fadeIn(500);
 }

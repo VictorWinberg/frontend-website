@@ -6,9 +6,9 @@
 
 body {
   font-family: sans-serif;
-  position: relative;
 }
 
+/* TODO: Remove? */
 h1 {
   text-align: center;
 }
@@ -25,12 +25,23 @@ a {
   width: 100%;
 }
 
-header.brand {
+header {
   float: left;
   width: 26%;
   padding-left: 4%;
   line-height: 4em;
   font-size: 2em;
+}
+
+footer {
+  color: #eee;
+  background-color: #222;
+  text-align: center;
+  display: none; /* Script will turn this on */
+  float: left;
+  width: 92%;
+  padding: 0 4%;
+  line-height: 4em;
 }
 
 nav {
@@ -64,10 +75,10 @@ nav .handle {
     background: #222;
   }
 
-  header.brand {
+  header {
     text-align: center;
     width: 92%;
-    padding: 0 4% 0 4%;
+    padding: 0 4%;
   }
 
   nav {
