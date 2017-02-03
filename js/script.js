@@ -41,6 +41,10 @@ function mobileNavbar () {
     $('nav ul').toggleClass('is-visible');
     $('nav ul').children().one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() { changeNavbar(); });
   });
+  $('nav a').on('click', function(){
+    $('.menu-icon').removeClass('change');
+    $('nav ul').removeClass('is-visible');
+  });
 
   function changeNavbar() {
     if($(window).width() < 768) {
