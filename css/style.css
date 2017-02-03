@@ -87,6 +87,34 @@ img {
   color: #ddd;
 }
 
+.aspect {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2%;
+}
+.aspect-16x9 {
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+.aspect-4x3 {
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+}
+.aspect-3x4 {
+  padding-top: 125%; /* 3:4 Aspect Ratio */
+}
+.aspect img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.aspect img.tall {
+  max-width: none;
+  max-height: 100%;
+}
+
 header {
   float: left;
   width: 26%;
@@ -137,8 +165,21 @@ nav .handle {
 
 /* Small Devices and tablets */
 @media screen and (max-width : 768px) {
+  h1 {
+    font-size: 125%;
+  }
+
   .upper-container {
     background: #222;
+  }
+
+  .one-half, .one-third, .col {
+    width: 100%;
+    margin: 4% 0;
+  }
+  .sidebar {
+    width: 100%;
+    margin: 0;
   }
 
   header {
