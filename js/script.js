@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $(document).on('mousemove', function(event) {devMode(event)});
+  $(document).on('mousemove', function(event) { mouseAndScreenInfo(event); });
 
+  smoothAnchorScroll();
   mobileNavbar();
-
   footerMarginFix();
 });
 
@@ -42,6 +42,21 @@ function footerMarginFix() {
   $('footer').css('display', 'block').hide().fadeIn(500);
 }
 
-function devMode(event) {
+function smoothAnchorScroll() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+     var target = $(this.hash);
+     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+     if (target.length) {
+       $('html, body').animate({
+         scrollTop: target.offset().top
+       }, 1000);
+       return false;
+     }
+   }
+ });
+}
+
+function mouseAndScreenInfo(event) {
   $('footer').html("<b>Footer.</b> Mouse pos: x = " + event.pageX + ", y = " + event.pageY + ". Screen: width = " + $(window).width() + ", height = " + $(window).height() + ". Copyright (c) 2016 Copyright Holder All Rights Reserved.");
 }
