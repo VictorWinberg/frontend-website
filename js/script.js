@@ -3,8 +3,34 @@ $(document).ready(function() {
 
   smoothAnchorScroll();
   mobileNavbar();
+  parallaxImages();
   footerMarginFix();
 });
+
+function mouseAndScreenInfo(event) {
+  $('footer').html("<b>Footer.</b> Mouse pos: x = " + event.pageX + ", y = " + event.pageY + ". Screen: width = " + $(window).width() + ", height = " + $(window).height() + ". Copyright (c) 2016 Copyright Holder All Rights Reserved.");
+}
+
+function parallaxImages() {
+  $('.parallax').each(function(i) {
+    $(this).css('background-image', 'url("img/pattern' + (i+1) + '.jpg")');
+  });
+}
+
+function smoothAnchorScroll() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+     var target = $(this.hash);
+     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+     if (target.length) {
+       $('html, body').animate({
+         scrollTop: target.offset().top
+       }, 1000);
+       return false;
+     }
+   }
+ });
+}
 
 function mobileNavbar () {
   var aboveHeight = $('header').outerHeight();
@@ -40,23 +66,4 @@ function footerMarginFix() {
     $('footer').css('margin-top', margin + 'px');
   }
   $('footer').css('display', 'block').hide().fadeIn(500);
-}
-
-function smoothAnchorScroll() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-     var target = $(this.hash);
-     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-     if (target.length) {
-       $('html, body').animate({
-         scrollTop: target.offset().top
-       }, 1000);
-       return false;
-     }
-   }
- });
-}
-
-function mouseAndScreenInfo(event) {
-  $('footer').html("<b>Footer.</b> Mouse pos: x = " + event.pageX + ", y = " + event.pageY + ". Screen: width = " + $(window).width() + ", height = " + $(window).height() + ". Copyright (c) 2016 Copyright Holder All Rights Reserved.");
 }
