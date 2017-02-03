@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Hind); /* Body Font */
+@import url(https://fonts.googleapis.com/css?family=Nobile); /* Heading Font */
+
 * {
   margin: 0;
   border: 0;
@@ -5,17 +8,39 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Hind', sans-serif;
+  font-size: 18px;
+  position: relative;
 }
 
-/* TODO: Remove? */
 h1 {
+  color: #555;
+  font-family: 'Nobile', sans-serif;
+  font-size: 175%;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 3% 0;
 }
-
+h3 {
+  color: #555;
+  font-family: 'Nobile', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+}
 a {
   text-decoration: none;
   color: inherit;
+}
+p {
+  color: #555;
+  padding: 2%;
+  text-align: justify;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .upper-container {
@@ -23,6 +48,43 @@ a {
   background-color: #222;
   float: left;
   width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.one-half {
+  float: left;
+  width: 44%;
+  margin: 2% 0 3% 4%;
+}
+.one-third {
+  float: left;
+  width: 28%;
+  margin: 3% 0 3% 4%;
+}
+.col {
+  float: left;
+  width: 60%;
+  margin: 4% 0 4% 4%;
+}
+.sidebar {
+  float: left;
+  width: 26%;
+  margin: 4% 4%;
+}
+.clearfix {
+  clear: both;
+}
+
+.parallax {
+  overflow: hidden;
+  background: url("http://www.richaven.com/wp-content/uploads/2012/10/tesslbkg-dark2-300x291.jpg") repeat fixed 100%;
+}
+.parallax h3, .parallax p {
+  color: #ddd;
 }
 
 header {
@@ -33,12 +95,16 @@ header {
   font-size: 2em;
 }
 
+header span {
+  white-space: nowrap;
+}
+
 footer {
+  display: none;
+  float: left;
   color: #eee;
   background-color: #222;
   text-align: center;
-  display: none; /* Script will turn this on */
-  float: left;
   width: 92%;
   padding: 0 4%;
   line-height: 4em;
@@ -121,43 +187,43 @@ nav .handle {
   }
 
   nav ul li:nth-child(1) {
-    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 1.0s, height 0.1s linear 1.15s;
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.75s, height 0.1s linear 0.80s;
   }
   nav ul li:nth-child(2) {
-    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.8s, height 0.1s linear 0.95s;
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.60s, height 0.1s linear 0.65s;
   }
   nav ul li:nth-child(3) {
-    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.6s, height 0.1s linear 0.75s;
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.45s, height 0.1s linear 0.50s;
   }
   nav ul li:nth-child(4) {
-    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.4s, height 0.1s linear 0.55s;
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.30s, height 0.1s linear 0.35s;
   }
   nav ul li:nth-child(5) {
-    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1) 0.2s, height 0.1s linear 0.35s;
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.15s, height 0.1s linear 0.20s;
   }
   nav ul li:nth-child(6) {
-    transition: transform 0.25s cubic-bezier(0.9,-1,0.3,1), height 0.1s linear 0.15s;
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1), height 0.1s linear 0.05s;
   }
 
   nav ul.is-visible li {
     transform: rotateX(0deg);
     height: 58px;
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2), height 0.1s linear;
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2), height 0.1s linear;
   }
   nav ul.is-visible li:nth-child(2) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.2s, height 0.1s linear 0.2s;
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.15s, height 0.1s linear 0.15s;
   }
   nav ul.is-visible li:nth-child(3) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.4s, height 0.1s linear 0.4s;
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.30s, height 0.1s linear 0.30s;
   }
   nav ul.is-visible li:nth-child(4) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.6s, height 0.1s linear 0.6s;
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.45s, height 0.1s linear 0.45s;
   }
   nav ul.is-visible li:nth-child(5) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 0.8s, height 0.1s linear 0.8s;
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.60s, height 0.1s linear 0.60s;
   }
   nav ul.is-visible li:nth-child(6) {
-    transition: transform 0.25s cubic-bezier(0.7,0,0.1,2) 1.0s, height 0.1s linear 1.0s;
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.75s, height 0.1s linear 0.75s;
   }
 
 }
