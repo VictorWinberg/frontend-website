@@ -1,0 +1,37 @@
+/* Small Devices and tablets */
+@media screen and (max-width : 768px) {
+  nav ul li:nth-child(1) {
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.75s, height 0.1s linear 0.80s;
+  }
+  nav ul li:nth-child(2) {
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.60s, height 0.1s linear 0.65s;
+  }
+  nav ul li:nth-child(3) {
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.45s, height 0.1s linear 0.50s;
+  }
+  nav ul li:nth-child(4) {
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.30s, height 0.1s linear 0.35s;
+  }
+  nav ul li:nth-child(5) {
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.15s, height 0.1s linear 0.20s;
+  }
+  nav ul li:nth-child(6) {
+    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1), height 0.1s linear 0.05s;
+  }
+
+  nav ul.is-visible li:nth-child(2) {
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.15s, height 0.1s linear 0.15s;
+  }
+  nav ul.is-visible li:nth-child(3) {
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.30s, height 0.1s linear 0.30s;
+  }
+  nav ul.is-visible li:nth-child(4) {
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.45s, height 0.1s linear 0.45s;
+  }
+  nav ul.is-visible li:nth-child(5) {
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.60s, height 0.1s linear 0.60s;
+  }
+  nav ul.is-visible li:nth-child(6) {
+    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.75s, height 0.1s linear 0.75s;
+  }
+}

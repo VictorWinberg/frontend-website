@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Hind); /* Body Font */
 @import url(https://fonts.googleapis.com/css?family=Nobile); /* Heading Font */
 
+@import url(link-animations.css);
+@import url(menu-icon.css);
+@import url(navbar-mobile-animation.css);
+
 * {
   margin: 0;
   border: 0;
@@ -35,7 +39,7 @@ a {
 }
 p {
   color: #555;
-  padding: 2%;
+  padding: 2% 0;
   text-align: justify;
 }
 img {
@@ -55,6 +59,11 @@ img {
   overflow: hidden;
   max-width: 1280px;
   margin: 0 auto;
+}
+.full {
+  float: left;
+  width: 92%;
+  margin: 2% 4% 3% 4%;
 }
 .one-half {
   float: left;
@@ -131,9 +140,6 @@ header {
   padding-left: 4%;
   line-height: 4em;
   font-size: 2em;
-}
-
-header span {
   white-space: nowrap;
 }
 
@@ -156,17 +162,18 @@ nav {
 
 nav ul {
   text-align: center;
+  float: right;
+  margin-right: 4%;
 }
 
 nav ul li {
-  display: inline-block;
-  padding: 15px;
-  /*cursor: pointer;*/
+  display: block;
+  float: left;
 }
 
-nav ul li:hover {
-  color: #222;
-  background-color: khaki;
+nav ul li a {
+  display: block;
+  padding: 15px;
 }
 
 nav .handle {
@@ -183,13 +190,9 @@ nav .handle {
     background: #222;
   }
 
-  .one-half, .one-third, .col {
-    width: 100%;
-    margin: 4% 0;
-  }
-  .sidebar {
-    width: 100%;
-    margin: 0;
+  .full, .one-half, .one-third, .col, .sidebar {
+    width: 92%;
+    margin: 4% 4%;
   }
 
   header {
@@ -207,7 +210,7 @@ nav .handle {
   nav.fixed {
     position: fixed;
     top: 0;
-    /*z-index: 100;*/
+    z-index: 100;
   }
 
   nav .handle {
@@ -223,6 +226,8 @@ nav .handle {
   nav ul {
     perspective: 150px;
     background-color: white;
+    float: none;
+    margin-right: 0;
   }
 
   nav ul li {
@@ -237,44 +242,13 @@ nav .handle {
     transform: rotateX(-70deg);
   }
 
-  nav ul li:nth-child(1) {
-    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.75s, height 0.1s linear 0.80s;
-  }
-  nav ul li:nth-child(2) {
-    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.60s, height 0.1s linear 0.65s;
-  }
-  nav ul li:nth-child(3) {
-    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.45s, height 0.1s linear 0.50s;
-  }
-  nav ul li:nth-child(4) {
-    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.30s, height 0.1s linear 0.35s;
-  }
-  nav ul li:nth-child(5) {
-    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1) 0.15s, height 0.1s linear 0.20s;
-  }
-  nav ul li:nth-child(6) {
-    transition: transform 0.15s cubic-bezier(0.9,-1,0.3,1), height 0.1s linear 0.05s;
-  }
-
   nav ul.is-visible li {
     transform: rotateX(0deg);
     height: 58px;
     transition: transform 0.15s cubic-bezier(0.7,0,0.1,2), height 0.1s linear;
   }
-  nav ul.is-visible li:nth-child(2) {
-    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.15s, height 0.1s linear 0.15s;
-  }
-  nav ul.is-visible li:nth-child(3) {
-    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.30s, height 0.1s linear 0.30s;
-  }
-  nav ul.is-visible li:nth-child(4) {
-    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.45s, height 0.1s linear 0.45s;
-  }
-  nav ul.is-visible li:nth-child(5) {
-    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.60s, height 0.1s linear 0.60s;
-  }
-  nav ul.is-visible li:nth-child(6) {
-    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2) 0.75s, height 0.1s linear 0.75s;
-  }
 
+  nav ul li a {
+    padding: 0;
+  }
 }
