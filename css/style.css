@@ -12,9 +12,9 @@
 }
 
 body {
+  position: relative;
   font-family: 'Hind', sans-serif;
   font-size: 18px;
-  position: relative;
 }
 
 h1 {
@@ -150,14 +150,15 @@ footer {
   background-color: #222;
   text-align: center;
   width: 92%;
-  padding: 0 4%;
-  line-height: 4em;
+  padding: 2em 4%;
+  line-height: 2em;
 }
 
 nav {
   float: left;
   width: 70%;
   padding: 50px 0;
+  opacity: 0.98;
 }
 
 nav ul {
@@ -205,6 +206,7 @@ nav .handle {
     padding: 0;
     width: 100%;
     background: none;
+    box-shadow: 0 8px 6px -6px #999;
   }
 
   nav.fixed {
@@ -228,6 +230,8 @@ nav .handle {
     background-color: white;
     float: none;
     margin-right: 0;
+    position: absolute;
+    width: 100%;
   }
 
   nav ul li {

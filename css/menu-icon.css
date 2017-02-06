@@ -1,7 +1,7 @@
 .menu-icon {
   display: inline-block;
   float: right;
-  margin-top: -10px;
+  margin-top: -7px;
   cursor: pointer;
 }
 
@@ -13,14 +13,14 @@
   transition: 0.4s;
 }
 
-.menu-icon.change .bar1 {
+.menu-icon.cross .bar1 {
   transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
-.menu-icon.change .bar2 {
+.menu-icon.cross .bar2 {
   opacity: 0;
 }
 
-.menu-icon.change .bar3 {
+.menu-icon.cross .bar3 {
   transform: rotate(45deg) translate(-8px, -8px) ;
 }
