@@ -45,6 +45,8 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  opacity: 0;
+  animation: fadeIn 1.0s ease 200ms forwards;
 }
 
 .upper-container {
@@ -93,6 +95,8 @@ img {
   overflow: hidden;
   background: white repeat fixed 100%;
   box-shadow: inset 0 15px 15px -10px #333, inset 0 -15px 15px -10px #333;
+  opacity: 0;
+  animation: fadeIn 200ms ease 200ms forwards;
 }
 .parallax h3, .parallax p {
   color: #eee;
@@ -128,9 +132,6 @@ img {
 }
 
 .panel {
-  -webkit-transition: all .8s ease-in-out;
-	-moz-transition: all .8s ease-in-out;
-	-o-transition: all .8s ease-in-out;
 	transition: all .8s ease-in-out;
 }
 
@@ -179,6 +180,14 @@ nav ul li a {
 
 nav .handle {
   display: none;
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+  to {
+     opacity: 1;
+   }
 }
 
 /* Small Devices and tablets */
