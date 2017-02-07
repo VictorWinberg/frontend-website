@@ -54,7 +54,7 @@ function mobileNavbar () {
   $(window).scroll(function() { changeNavbar(); });
   $('.menu-icon').on('click', function(){
     $('.menu-icon').toggleClass('cross');
-    $('nav ul').toggleClass('is-visible');
+    $('nav ul').toggleClass('is-visible')
   });
   $('nav a').on('click', function(){
     $('.menu-icon').removeClass('cross');
@@ -68,9 +68,9 @@ function mobileNavbar () {
         $('header').css('display', 'none');
         $('html').css('padding-top', navHeight + aboveHeight + 'px');
       } else {
-      $('nav').removeClass('fixed');
-      $('header').css('display', 'block');
-      $('html').css('padding-top', '0px');
+        $('nav').removeClass('fixed');
+        $('header').css('display', 'block');
+        $('html').css('padding-top', '0px');
     }
   }
 }

@@ -158,7 +158,7 @@ nav {
   float: left;
   width: 70%;
   padding: 50px 0;
-  opacity: 0.98;
+  opacity: 0.992;
 }
 
 nav ul {
@@ -223,36 +223,5 @@ nav .handle {
     width: 92%;
     padding: 15px 4%;
     border-bottom: thick solid khaki;
-  }
-
-  nav ul {
-    perspective: 150px;
-    background-color: white;
-    float: none;
-    margin-right: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-  nav ul li {
-    display: block;
-    background: #222;
-    overflow: hidden;
-    line-height: 58px;
-    height: 0;
-    width: 100%;
-    padding: 0;
-    transform-origin: top;
-    transform: rotateX(-70deg);
-  }
-
-  nav ul.is-visible li {
-    transform: rotateX(0deg);
-    height: 58px;
-    transition: transform 0.15s cubic-bezier(0.7,0,0.1,2), height 0.1s linear;
-  }
-
-  nav ul li a {
-    padding: 0;
   }
 }
