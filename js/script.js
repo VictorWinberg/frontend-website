@@ -50,7 +50,11 @@ function mobileNavbar () {
   var aboveHeight = $('header').outerHeight();
   var navHeight = $('nav').outerHeight();
 
-  $(window).resize(function() { changeNavbar(); });
+  $(window).resize(function() {
+    aboveHeight = $('header').outerHeight();
+    navHeight = $('nav').outerHeight();
+    changeNavbar();
+  });
   $(window).scroll(function() { changeNavbar(); });
   $('.menu-icon').on('click', function(){
     $('.menu-icon').toggleClass('cross');
