@@ -5,6 +5,10 @@ $(document).ready(function() {
   footerMarginFix();
 
   debug();
+
+  $('html').promise().done(function() {
+    $('html').addClass('loaded');
+  });
 });
 
 function parallaxImages() {

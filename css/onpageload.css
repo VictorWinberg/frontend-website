@@ -1,0 +1,41 @@
+html:before, html:after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 999;
+}
+
+html:before {
+  top: 0;
+  background: #222;
+  transition: top 1s cubic-bezier(0.9,-1,0.3,1) 0.2s;
+}
+
+html:after {
+  border: 8px solid #111;
+  border-top: 8px solid khaki;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s ease infinite;
+  transition: all 1s cubic-bezier(0.9,-1,0.3,1);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+html.loaded:before {
+  top: 100vh;
+}
+
+html.loaded:after {
+  top: 150vh;
+  opacity: 0;
+}
