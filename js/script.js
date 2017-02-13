@@ -18,13 +18,7 @@ function parallaxImages() {
 }
 
 function smoothAnchorScroll() {
-  var header = $('header').outerHeight();
-
   $('a[href*="#"]').on('click', scrollAnimation);
-  $(window).resize(function() {
-    $('a[href*="#"]').off('click', scrollAnimation);
-    $('a[href*="#"]').on('click', scrollAnimation);
-  });
 
   function scrollAnimation(e) {
     //prevent the default "hard" jump
@@ -41,7 +35,7 @@ function smoothAnchorScroll() {
     if(offset != 0) {
       $('html, body').animate({
         scrollTop: scrollPos + offset },
-        1000, function() {
+        400, function() {
           //attach #target to pageurl
           location.hash = target;
       });
@@ -73,11 +67,9 @@ function mobileNavbar () {
   function changeNavbar() {
     if($(window).width() < 768 && $(window).scrollTop() > aboveHeight) {
         $('nav').addClass('fixed');
-        $('header').css('display', 'none');
-        $('html').css('padding-top', navHeight + aboveHeight + 'px');
+        $('html').css('padding-top', navHeight + 'px');
       } else {
         $('nav').removeClass('fixed');
-        $('header').css('display', 'block');
         $('html').css('padding-top', '0px');
     }
   }
