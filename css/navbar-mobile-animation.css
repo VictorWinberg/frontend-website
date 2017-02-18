@@ -6,7 +6,7 @@
 
   nav ul {
     perspective: 150px;
-    position: absolute;
+    position: fixed;
     float: none;
     margin-right: 0;
     background-color: #222;
