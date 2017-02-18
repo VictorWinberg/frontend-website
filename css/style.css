@@ -5,6 +5,7 @@
 @import url(menu-icon.css);
 @import url(navbar-mobile-animation.css);
 @import url(onpageload.css);
+@import url(parallax.css);
 
 * {
   margin: 0;
@@ -48,6 +49,9 @@ img {
   height: auto;
 }
 
+#container {
+  background: white; /* TODO: Remove this */
+}
 .upper-container {
   color: #eee;
   background-color: #222;
@@ -92,7 +96,9 @@ img {
 
 .parallax {
   overflow: hidden;
-  background: white repeat fixed 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100%;
   box-shadow: inset 0 15px 15px -10px #333, inset 0 -15px 15px -10px #333;
 }
 .parallax h3, .parallax p {
@@ -195,9 +201,6 @@ nav .handle {
   .full, .one-half, .one-third, .col, .sidebar {
     width: 70%;
     margin: 4% 15%;
-  }
-  .col, .sidebar {
-
   }
 
   .aspect {
