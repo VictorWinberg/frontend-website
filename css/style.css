@@ -183,7 +183,7 @@ nav .handle {
 }
 
 .panel {
-	transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
 }
 
 /* Small Devices and tablets */
